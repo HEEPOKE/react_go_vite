@@ -1,11 +1,8 @@
-import React from 'react';
 
-function LoginPage() {
-    return (
-        <div className="mt-6">
-            <h1>ssss</h1>
-        </div>
-    )
-}
+const LoginPage = () => (
+    <div className="showcase text-center">
+        <h1>login</h1>
+    </div>
+)
 
 export default LoginPage

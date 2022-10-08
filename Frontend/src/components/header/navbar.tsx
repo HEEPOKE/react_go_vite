@@ -1,30 +1,30 @@
-// import { Component } from "react";
-import Routers from '../../route';
+import { LinkContainer } from "react-router-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-interface IHeaaferProps {
-
-}
-
 function MainMenu() {
-    <Routers />
     return (
-
         <Navbar fixed="top" bg="dark" expand="lg" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">Topic</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        <LinkContainer to="/">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        {/* <Nav><Link className="nav-link" to="/">Home</Link></Nav> */}
+                        <LinkContainer to="/">
+                            <Nav.Link>Link</Nav.Link>
+                        </LinkContainer>
                         <NavDropdown title="Options" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/login">
-                                Login
-                            </NavDropdown.Item>
+                            <LinkContainer to="/login">
+                                <NavDropdown.Item>
+                                    Login
+                                </NavDropdown.Item>
+                            </LinkContainer>
                             <NavDropdown.Item href="/register">
                                 Register
                             </NavDropdown.Item>
@@ -37,7 +37,7 @@ function MainMenu() {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     )
 }
 

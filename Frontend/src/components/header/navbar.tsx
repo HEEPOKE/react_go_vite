@@ -1,16 +1,18 @@
+// import { Component } from "react";
+import Routers from '../../route';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
 
 interface IHeaaferProps {
 
 }
 
 function MainMenu() {
-
+    <Routers />
     return (
+
         <Navbar fixed="top" bg="dark" expand="lg" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">Topic</Navbar.Brand>
@@ -19,10 +21,12 @@ function MainMenu() {
                     <Nav className="me-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
+                        <NavDropdown title="Options" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="/login">
+                                Login
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="/register">
+                                Register
                             </NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                             <NavDropdown.Divider />

@@ -1,8 +1,7 @@
-package routes
+package route
 
 import (
-	// "../controllers"
-	"Backend/go_react_vite/controllers"
+	"Api/Backend/controllers"
 
 	"github.com/gofiber/fiber/v2"
 )
